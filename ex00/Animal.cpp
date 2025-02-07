@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 18:43:58 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/07 19:02:18 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/07 19:12:56 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,14 @@ Animal::~Animal()
 {
 	std::cout << "Animal destructor called" << std::endl;
 }
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal goes \"Auuuuuuuu!\"." << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return _type;
+}
+
