@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpietrza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milosz <milosz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 19:19:56 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/07 19:30:20 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:58:53 by milosz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog::Dog(std::string type) : _type(type)
 }
 
 //copy constructor
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	_type = other._type;
 	std::cout << "Dog class copied" << std::endl;
@@ -36,7 +36,7 @@ Dog &Dog::operator=(const Dog &other)
 {
 	if (this !=&other)
 		_type = other._type;
-	std::cout << "Dog assignment operator called" << std:endl;
+	std::cout << "Dog assignment operator called" << std::endl;
 	return *this;
 }
 
@@ -46,7 +46,7 @@ Dog::~Dog()
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-void Dog::MakeSound() const
+void Dog::makeSound() const
 {
 	std::cout << "Dog goes \"Wow wow!\"." << std::endl;
 }

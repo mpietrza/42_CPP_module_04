@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milosz <milosz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 18:30:08 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/07 19:02:34 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:49:22 by milosz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Animal
 {
 	protected:
 		std::string	_type;
+		
 	public:
 		Animal();
 		Animal(std::string type);
