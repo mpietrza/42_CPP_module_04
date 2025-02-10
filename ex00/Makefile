@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: milosz <milosz@student.42.fr>              +#+  +:+       +#+         #
+#    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/02/10 14:26:45 by milosz           ###   ########.fr        #
+#    Updated: 2025/02/10 18:58:46 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ all:	$(DIR_OBJS) $(NAME)
 $(DIR_OBJS)%.o : %.cpp
 	@echo $(B)Compiling [$<]... $(DEF_COLOR)
 	@printf $(Y) 
-	$(CC) $(CFLAGS) -MMD -MP -c -o $@ $< 
+	$(CC) $(CFLAGS) $(STD) -MMD -MP -c -o $@ $< 
 	@echo $(DEF_COLOR)
 
 $(DIR_OBJS):
@@ -61,7 +61,7 @@ $(DIR_OBJS):
 
 
 $(NAME): $(OBJS) Makefile
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(STD) $(OBJS) -o $(NAME)
 	@echo $(G)Polymorphism compiled successfully! $(DEF_COLOR)
 
 clean:
