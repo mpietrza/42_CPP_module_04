@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:03:43 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/11 15:40:31 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:04:47 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@
 class Cat : public Animal
 {
 	private:
-		std::string _type;
+		Brain* _brain;
 
 	public:
 		Cat();
-		Cat(std::string type);
 		Cat(const Cat &other);
 		Cat &operator=(const Cat &other);
 		~Cat();
 
-		void makeSound() const;
+		void		makeSound() const;
+		void		setBrainIdea(const std::string &idea, int index);
+		std::string	getBrainIdea(int index) const;
 };
 
 #endif

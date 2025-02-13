@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:28:16 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/12 15:54:47 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:27:13 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ class Brain
 		Brain(const Brain &other);
 		Brain &operator=(const Brain &other);
 		~Brain();
-		void setIdea(std::string const idea, int index);
+		
+		void setIdea(std::string const &idea, int index);
 		std::string getIdea(int index) const;
 
 };
