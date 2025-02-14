@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:03:43 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/13 19:04:47 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/14 13:34:23 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Cat : public Animal
 		void		makeSound() const;
 		void		setBrainIdea(const std::string &idea, int index);
 		std::string	getBrainIdea(int index) const;
+		std::string	getType() const;
 };
 
 #endif

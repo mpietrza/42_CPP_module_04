@@ -6,11 +6,11 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/02/11 13:55:06 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/02/14 13:42:40 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polymorphism
+NAME = WorldOnFire
 CC = c++
 CFLAGS = -Wall -Wextra -Werror #-g -O0
 STD = -std=c++98
@@ -36,6 +36,7 @@ SRC		= Animal.cpp \
 		  Cat.cpp \
 		  WrongAnimal.cpp \
 		  WrongCat.cpp \
+		  Brain.cpp \
 		  main.cpp 
 
 OBJS	= $(addprefix $(DIR_OBJS), $(SRC:.cpp=.o))
@@ -61,19 +62,19 @@ $(DIR_OBJS):
 
 $(NAME): $(OBJS) Makefile
 	$(CC) $(CFLAGS) $(STD) $(OBJS) -o $(NAME)
-	@echo $(G)Polymorphism compiled successfully! $(DEF_COLOR)
+	@echo $(G)WorldOnFire compiled successfully! $(DEF_COLOR)
 
 clean:
 	@echo $(GRAY)
 	$(RM) $(OBJS) $(DEPS) $(DIR_OBJS)
-	@echo $(G)Polymorphism object files erased successfully! $(DEF_COLOR)
+	@echo $(G)WorldOnFire object files erased successfully! $(DEF_COLOR)
 
 fclean: clean
 	@echo $(GRAY)
 	$(RM) $(NAME)
-	@echo $(G)Polymorphism executable files erased succesfully! $(DEF_COLOR)
+	@echo $(G)WorldOnFire executable files erased succesfully! $(DEF_COLOR)
 
 re: fclean all
-	@echo $(G)Erased and recompiled every file of Polymorphism successfully! $(DEF_COLOR)
+	@echo $(G)Erased and recompiled every file of WorldOnFire successfully! $(DEF_COLOR)
 
 .PHONY: all clean fclean re

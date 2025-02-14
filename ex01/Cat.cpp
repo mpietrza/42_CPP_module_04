@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:16:13 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/13 19:06:08 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/14 13:34:40 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,9 @@ void Cat::setBrainIdea(const std::string &idea, int index)
 std::string Cat::getBrainIdea(int index) const
 {
 	return _brain->getIdea(index);
+}
+
+std::string Cat::getType() const
+{
+	return _type;
 }
