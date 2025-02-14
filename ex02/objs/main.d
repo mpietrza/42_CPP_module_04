@@ -1,7 +1,7 @@
-objs/main.o: main.cpp Animal.hpp Brain.hpp Dog.hpp Cat.hpp \
+objs/main.o: main.cpp AAnimal.hpp Brain.hpp Dog.hpp Cat.hpp \
   WrongAnimal.hpp WrongCat.hpp
 
-Animal.hpp:
+AAnimal.hpp:
 
 Brain.hpp:
 

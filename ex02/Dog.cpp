@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 19:19:56 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/14 16:27:41 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:36:45 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "colors.hpp"
 
 //default constructor
-Dog::Dog() : Animal("Dog")
+Dog::Dog() : AAnimal("Dog")
 {
 	_brain = new Brain();
 	std::cout << DIM << "Dog class created with a default constructor" << RESET << std::endl;
@@ -27,7 +27,7 @@ Dog::Dog() : Animal("Dog")
 }*/
 
 //copy constructor
-Dog::Dog(const Dog &other) : Animal(other)
+Dog::Dog(const Dog &other) : AAnimal(other)
 {
 	_brain = new Brain(*other._brain);
 	_type = other._type;

@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:16:13 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/14 16:27:48 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:36:48 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "colors.hpp"
 
 //default constructor
-Cat::Cat(): Animal("Cat")
+Cat::Cat(): AAnimal("Cat")
 {
 	_brain = new Brain();
 	std::cout << DIM << "Cat class created with a default constructor" << RESET << std::endl;
@@ -27,7 +27,7 @@ Cat::Cat(): Animal("Cat")
 }*/
 
 //copy constructor
-Cat::Cat(const Cat &other) : Animal(other)
+Cat::Cat(const Cat &other) : AAnimal(other)
 {
 	_brain = new Brain(*other._brain);
 	_type = other._type;
