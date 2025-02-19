@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/18 16:36:54 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/19 18:32:52 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/02/19 17:19:33 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/02/19 18:32:50 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
-
-//parametrized constructor
-AMateria::AMateria(std::string const & type) : _type(type) {}
+#include "Ice.hpp"
 
 //default constructor
-AMateria::AMateria() : _type("") {}
+Ice::Ice()
+{
+	_type = "ice";
+}
 
 //copy constructor
-AMateria::AMateria(AMateria const & other) : _type(other._type) {}
+Ice::Ice(Ice const & other)
+{
+	_type = other._type;
+}
 
 //assignment operator
-AMateria & AMateria::operator=(AMateria const & other) 
+Ice &Ice::operator=(Ice const & other)
 {
 	if (this != &other)
 		_type = other._type;
@@ -30,16 +33,15 @@ AMateria & AMateria::operator=(AMateria const & other)
 }
 
 //destructor
-AMateria::~AMateria() {}
+Ice::~Ice()	{}
 
-std::string const & AMateria::getType() const
+AMateria* Ice::clone() const
 {
-	return _type;
+	return new Ice(*this);
 }
 
-void AMateria::use(ICharacter& target)
+void Ice::use(ICharacter & target)
 {
-	//default implementation does nothing
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
-
 

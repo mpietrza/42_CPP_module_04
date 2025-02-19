@@ -6,7 +6,7 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/02/18 15:29:38 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/02/19 15:43:41 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,10 @@ C = "\033[36m"
 W = "\033[37m"
 
 #SOURCES
-SRC		= Amateria.cpp \
+SRC		= AMateria.cpp \
 		  Ice.cpp \
 		  Cure.cpp \
+		  ICharacter.cpp \
 		  Character.cpp \
 		  main.cpp 
 
