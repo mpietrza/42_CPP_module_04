@@ -6,11 +6,11 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/02/19 15:43:41 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/02/24 16:55:16 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Interface&Recap
+NAME = InterfaceAndRecap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror #-g -O0
 STD = -std=c++98
@@ -34,8 +34,8 @@ W = "\033[37m"
 SRC		= AMateria.cpp \
 		  Ice.cpp \
 		  Cure.cpp \
-		  ICharacter.cpp \
 		  Character.cpp \
+		  MateriaSource.cpp \
 		  main.cpp 
 
 OBJS	= $(addprefix $(DIR_OBJS), $(SRC:.cpp=.o))
@@ -61,19 +61,19 @@ $(DIR_OBJS):
 
 $(NAME): $(OBJS) Makefile
 	$(CC) $(CFLAGS) $(STD) $(OBJS) -o $(NAME)
-	@echo $(G)Interface&Recap compiled successfully! $(DEF_COLOR)
+	@echo $(G)InterfaceAndRecap compiled successfully! $(DEF_COLOR)
 
 clean:
 	@echo $(GRAY)
 	$(RM) $(OBJS) $(DEPS) $(DIR_OBJS)
-	@echo $(G)Interface&Recap object files erased successfully! $(DEF_COLOR)
+	@echo $(G)InterfaceAndRecap object files erased successfully! $(DEF_COLOR)
 
 fclean: clean
 	@echo $(GRAY)
 	$(RM) $(NAME)
-	@echo $(G)Interface&Recap executable files erased succesfully! $(DEF_COLOR)
+	@echo $(G)InterfaceAndRecap executable files erased succesfully! $(DEF_COLOR)
 
 re: fclean all
-	@echo $(G)Erased and recompiled every file of Interface&Recap successfully! $(DEF_COLOR)
+	@echo $(G)Erased and recompiled every file of InterfaceAndRecap successfully! $(DEF_COLOR)
 
 .PHONY: all clean fclean re

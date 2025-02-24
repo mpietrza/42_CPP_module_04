@@ -6,22 +6,25 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 17:19:33 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/19 18:32:50 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/24 17:03:58 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "colors.hpp"
 
 //default constructor
 Ice::Ice()
 {
 	_type = "ice";
+	std::cout << DIM << "Ice default constructor called" << RESET << std::endl;
 }
 
 //copy constructor
-Ice::Ice(Ice const & other)
+Ice::Ice(Ice const & other) : AMateria(other)
 {
 	_type = other._type;
+	std::cout << DIM << "Ice copy constructor called" << RESET << std::endl;
 }
 
 //assignment operator
@@ -29,11 +32,15 @@ Ice &Ice::operator=(Ice const & other)
 {
 	if (this != &other)
 		_type = other._type;
+	std::cout << DIM << "Ice assignment operator called" << RESET << std::endl;
 	return *this;
 }
 
 //destructor
-Ice::~Ice()	{}
+Ice::~Ice()	
+{
+	std::cout << DIM << "Ice destructor called" << RESET << std::endl;
+}
 
 AMateria* Ice::clone() const
 {
