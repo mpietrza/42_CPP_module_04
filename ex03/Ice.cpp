@@ -14,16 +14,14 @@
 #include "colors.hpp"
 
 //default constructor
-Ice::Ice()
+Ice::Ice() : AMateria("ice")
 {
-	_type = "ice";
 	std::cout << DIM << "Ice default constructor called" << RESET << std::endl;
 }
 
 //copy constructor
 Ice::Ice(Ice const & other) : AMateria(other)
 {
-	_type = other._type;
 	std::cout << DIM << "Ice copy constructor called" << RESET << std::endl;
 }
 
@@ -31,7 +29,7 @@ Ice::Ice(Ice const & other) : AMateria(other)
 Ice &Ice::operator=(Ice const & other)
 {
 	if (this != &other)
-		_type = other._type;
+		AMateria::operator=(other);
 	std::cout << DIM << "Ice assignment operator called" << RESET << std::endl;
 	return *this;
 }

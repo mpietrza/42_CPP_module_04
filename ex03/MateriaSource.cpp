@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:30:12 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/24 17:04:52 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/24 19:01:45 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ MateriaSource &MateriaSource::operator=(MateriaSource const &other)
 
 //destructor
 MateriaSource::~MateriaSource()
-{
+{	
 	for (int i = 0; i < 4; ++i)
 		if (templates[i])
 			delete templates[i];

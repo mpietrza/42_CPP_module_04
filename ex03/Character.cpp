@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:49:32 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/24 17:33:56 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/24 18:33:21 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,13 @@ Character & Character::operator=(Character const & other)
 Character::~Character()
 {
 	for (int i = 0; i < 4; ++i)
+	{
 		if (_inventory[i])
+		{
 			delete _inventory[i];
+			_inventory[i] = NULL; //C++98
+		}
+	}
 	std::cout << DIM << "Character destructor called" << RESET << std::endl;
 }
 

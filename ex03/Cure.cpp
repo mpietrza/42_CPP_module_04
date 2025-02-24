@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 18:26:03 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/24 17:05:39 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/24 18:36:32 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 #include "colors.hpp"
 
 //default constructor
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
-	_type = "cure";
 	std::cout << DIM << "Cure default constructor called" << RESET << std::endl;
 }
 
