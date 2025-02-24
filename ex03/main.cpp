@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:30:45 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/02/24 19:02:54 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/24 19:18:42 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,14 @@ void	additionalTest(void)
 	AMateria *healing = new Cure();
 	src->learnMateria(deadly);
 	src->learnMateria(healing);
-
+	
+	for (int i = 0; i < 2; i++)
+		someone->equip(deadly);
+	
+	for (int i = 2; i < 4; i++) 
+		someone->equip(healing);
 
 	ICharacter * anotherOne = new Character("Another One");
-
 	//test of use function
 	someone->use(0, *anotherOne);
 	someone->use(1, *someone);
